@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=Padauk:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&display=swap');
+
+:root{
+  --primario: #6161ff;
+  --secundario: #dde4ff;
+}
+
+html {
+  font-size: 62.25%;
+  box-sizing: border-box;
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
+body {
+  font-family: 'Padauk', sans-serif;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url(https://bv-dam.s3.amazonaws.com/dam/photos/1f/18/9d/f2/7fd78230e5c508b8040803f6f750cd49da020fe4467d2d746997547e.jpg);
+  
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 45rem;
+  position: relative;
+}
+
+main h1 {
+  font-family: 'Cinzel', serif;
+  text-align: center;
+  font-size: 13rem;
+  color: var(--secundario);
+  text-shadow: 0 0 .5rem #000;
+}
+
+.header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  background-color: var(--primario);
+}
+
+.header a {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  text-decoration: none;
+  font-weight: 700;
+  transition: text-shadow 0.5s;
+}
+
+.header a:hover {
+  text-shadow: 0 0 .5rem #000;
+}
+
+.header__p {
+  font-size: 3rem;
+  color: var(--secundario);
+  font-family: 'Cinzel', serif;
+  font-weight: 400;
+}
+
+.header__logo {
+  width:8rem;
+  margin-bottom: 1.3rem;
+}
+
+.nav {
+  margin-left: 20rem;
+  display: flex;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+.nav__a {
+  text-transform: uppercase;
+  text-decoration: none;
+  font-size: 1.6rem;
+  color: var(--secundario);
+}
+
+@media (max-width: 900px) {
+
+  .header {
+    flex-direction: column;
+    padding-bottom: 1rem;
+  }
+
+  .header a {
+    flex-direction: column;
+  }
+
+  .header__logo {
+    width:8rem;
+    margin: 0;
+  }
+
+  .header__p {
+    margin-top: 2rem;
+    margin-top: 0;
+  }
+
+  .nav {
+    margin: 0;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  main h1 {
+    font-size: 7rem;
+  }
+}
